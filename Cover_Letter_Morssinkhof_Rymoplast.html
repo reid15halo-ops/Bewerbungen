@@ -98,6 +98,34 @@
                 padding: 40px;
             }
         }
+    
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 20mm;
+                min-height: 100vh;
+            }
+            header {
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 
@@ -107,8 +135,8 @@
             <div class="sender-info">
                 <h1>Jonas Glawion</h1>
                 <p>Process Engineer - Plastics Technology</p>
-                <p>Grossostheim, Germany | +49 [Phone]</p>
-                <p>[Email] | linkedin.com/in/jonas-glawion</p>
+                <p>Grabenstraße 135, 63762 Großostheim, Bavaria, Germany | +49 179 4228285</p>
+                <p>jonasglawion@aol.com | linkedin.com/in/jonas-glawion-21824115a</p>
             </div>
         </header>
 
@@ -134,7 +162,7 @@
             <p><strong>Recycling & Compounding Specialist</strong><br>
                 My 6 years at <strong>MAAG Group</strong> were dedicated to optimizing polymer processing systems, with
                 a strong focus on recycling applications. I have successfully commissioned pelletizing lines for rPET
-                and rHDPE, increasing throughput by 22% while ensuring the high quality required for food-grade
+                and rHDPE, increasing throughput by outstanding while ensuring the high quality required for food-grade
                 applications. I understand the critical parameters for processing post-consumer waste and how to achieve
                 stable, high-quality output.</p>
 

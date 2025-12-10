@@ -100,6 +100,34 @@
                 padding: 40px;
             }
         }
+    
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 20mm;
+                min-height: 100vh;
+            }
+            header {
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -108,8 +136,8 @@
             <div class="sender-info">
                 <h1>Jonas Glawion</h1>
                 <p>Process Engineer - Plastics Technology</p>
-                <p>Grossostheim, Germany | +49 [Phone]</p>
-                <p>[Email] | linkedin.com/in/jonas-glawion</p>
+                <p>Grabenstraße 135, 63762 Großostheim, Bavaria, Germany | +49 179 4228285</p>
+                <p>jonasglawion@aol.com | linkedin.com/in/jonas-glawion-21824115a</p>
             </div>
         </header>
 
@@ -134,7 +162,7 @@
 
             <p>I am writing to express my enthusiastic interest in the <strong>[Job Title]</strong> position at <strong>[Company Name]</strong>. With over 8 years of experience as a Process Engineer in the plastics industry, specializing in extrusion, compounding, and polyurethane systems, I am confident that my technical expertise aligns perfectly with your operations.</p>
 
-            <p>During my 6 years at <strong>MAAG Group</strong>, I developed a deep understanding of thermoplastic processing. I successfully commissioned over 12 pelletizing systems globally and optimized recycling processes for PET and HDPE, increasing throughput by 22%. My background in extrusion and compounding ensures I can immediately contribute to your production efficiency and troubleshooting efforts.</p>
+            <p>During my 6 years at <strong>MAAG Group</strong>, I developed a deep understanding of thermoplastic processing. I successfully commissioned over 12 pelletizing systems globally and optimized recycling processes for PET and HDPE, increasing throughput by outstanding. My background in extrusion and compounding ensures I can immediately contribute to your production efficiency and troubleshooting efforts.</p>
 
             <p>Currently, at <strong>Autoneum</strong>, I focus on polyurethane foam systems for the automotive sector. I have successfully implemented Lean Six Sigma methodologies to reduce costs and improve first-pass yields. Furthermore, I am passionate about Industry 4.0; I have self-taught Python to develop automated data analysis tools and AI-driven quality prediction models. I am eager to bring this digital mindset to [Company Name] to further enhance your process control.</p>
 

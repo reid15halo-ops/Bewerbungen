@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,13 +27,15 @@
         }
 
         .container {
-            max-width: 210mm; /* A4 width */
+            max-width: 210mm;
+            /* A4 width */
             margin: 20px auto;
             background-color: var(--white);
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             display: grid;
             grid-template-columns: 30% 70%;
-            min-height: 297mm; /* A4 height */
+            min-height: 297mm;
+            /* A4 height */
         }
 
         /* Sidebar */
@@ -77,18 +80,20 @@
             text-align: center;
         }
 
-        .skills-list, .languages-list {
+        .skills-list,
+        .languages-list {
             list-style: none;
             padding: 0;
         }
 
-        .skills-list li, .languages-list li {
+        .skills-list li,
+        .languages-list li {
             margin-bottom: 8px;
             font-size: 0.9rem;
         }
 
         .skill-tag {
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 2px 8px;
             border-radius: 4px;
             display: inline-block;
@@ -178,31 +183,78 @@
         }
 
         @media print {
-            body {
-                background-color: white;
-            }
-            .container {
-                box-shadow: none;
+            @page {
+                size: A4;
                 margin: 0;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .container {
                 width: 100%;
                 max-width: none;
+                box-shadow: none;
+                margin: 0;
+                min-height: 100vh;
+                display: grid;
+                grid-template-columns: 30% 70%;
+                /* Simulate sidebar color for full page height */
+                background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 30%, white 30%, white 100%);
+            }
+
+            .sidebar {
+                background-color: transparent !important;
+                color: var(--white) !important;
+                padding: 15mm 5mm 15mm 15mm;
+                height: auto;
+            }
+
+            .main-content {
+                padding: 15mm 15mm 15mm 10mm;
+            }
+
+            /* Prevent limits */
+            .profile-img-placeholder,
+            .sidebar h2,
+            .skills-list,
+            .contact-info,
+            .experience-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            h2,
+            h3,
+            .section-title {
+                break-after: avoid;
+                page-break-after: avoid;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="profile-img-placeholder">
-                [Photo]
+                <img src="Gemini_Generated_Image_ldn0ffldn0ffldn0.png" alt="Jonas Glawion" width="150"
+                    style="border-radius: 50%; object-fit: cover;">
             </div>
-            
+
             <div class="contact-info">
                 <h2>Contact</h2>
-                <div>📍 Grossostheim, Germany</div>
-                <div>📧 [Email]</div>
-                <div>📱 +49 [Phone]</div>
-                <div>🔗 linkedin.com/in/jonas-glawion</div>
+                <div>📍 Grabenstraße 135, 63762 Großostheim, Bavaria, Germany</div>
+                <div>📧 jonasglawion@aol.com</div>
+                <div>📱 +49 179 4228285</div>
+                <div>🔗 linkedin.com/in/jonas-glawion-21824115a</div>
             </div>
 
             <h2>Hard Skills</h2>
@@ -238,7 +290,10 @@
             </header>
 
             <div class="summary">
-                Results-driven Process Engineer with over 8 years of experience in plastics processing, specializing in extrusion, compounding, and polyurethane (PUR) systems. Proven track record in optimizing production lines, commissioning international projects, and implementing Lean Six Sigma methodologies. Relocating to Spain/Netherlands.
+                Results-driven Process Engineer with over 8 years of experience in plastics processing, specializing in
+                extrusion, compounding, and polyurethane (PUR) systems. Proven track record in optimizing production
+                lines, commissioning international projects, and implementing Lean Six Sigma methodologies. Relocating
+                to Spain/Netherlands.
             </div>
 
             <h2 class="section-title">Professional Experience</h2>
@@ -249,12 +304,18 @@
                     <span class="exp-date">Oct 2023 – Present</span>
                 </div>
                 <div class="exp-company">Autoneum | Roßdorf, Germany</div>
-                <p class="exp-desc">Specializing in the industrialization and optimization of polyurethane foam production for automotive acoustic and thermal insulation.</p>
+                <p class="exp-desc">Specializing in the industrialization and optimization of polyurethane foam
+                    production for automotive acoustic and thermal insulation.</p>
                 <ul class="exp-achievements">
-                    <li>Optimized PUR metering systems, achieving <strong>8-12% cost reduction</strong> through material efficiency.</li>
-                    <li>Led industrialization of new PUR foam product, reducing cycle time by <strong>18%</strong>.</li>
-                    <li>Implemented AI-driven quality prediction model using Python, reducing scrap rates by <strong>11%</strong>.</li>
-                    <li>Executed root cause analyses (8D, Ishikawa) improving first-pass yield by 15%.</li>
+                    <li>Optimized PUR metering systems, achieving <strong>significant cost reduction</strong> through
+                        material efficiency.</li>
+                    <li>Led industrialization of new PUR foam product, reducing cycle time by
+                        <strong>substantial</strong>.
+                    </li>
+                    <li>Implemented AI-driven quality prediction model using Python, reducing scrap rates by
+                        <strong>notable</strong>.
+                    </li>
+                    <li>Executed root cause analyses (8D, Ishikawa) improving first-pass yield by considerable.</li>
                 </ul>
             </div>
 
@@ -263,18 +324,21 @@
                     <span class="exp-role">Process Engineer - Plastics Processing</span>
                     <span class="exp-date">Nov 2017 – Oct 2023</span>
                 </div>
-                <div class="exp-company">MAAG Group | Grossostheim, Germany</div>
-                <p class="exp-desc">Focused on extrusion, compounding, and pelletizing systems for thermoplastics with global commissioning duties.</p>
+                <div class="exp-company">MAAG Group | Großostheim, Bavaria, Germany</div>
+                <p class="exp-desc">Focused on extrusion, compounding, and pelletizing systems for thermoplastics with
+                    global commissioning duties.</p>
                 <ul class="exp-achievements">
                     <li>Commissioned <strong>12+ pelletizing systems</strong> across Europe and Asia.</li>
-                    <li>Optimized recycling processes for PET and HDPE, increasing throughput by <strong>22%</strong>.</li>
-                    <li>Reduced energy consumption by 9% through parameter optimization.</li>
+                    <li>Optimized recycling processes for PET and HDPE, increasing throughput by
+                        <strong>outstanding</strong>.
+                    </li>
+                    <li>Reduced energy consumption by measurable through parameter optimization.</li>
                     <li>Dimensioned filtration and die plates for various polymer applications.</li>
                 </ul>
             </div>
 
             <h2 class="section-title">Education</h2>
-            
+
             <div class="experience-item">
                 <div class="exp-header">
                     <span class="exp-role">Bachelor of Engineering - Plastics Technology</span>
@@ -293,10 +357,12 @@
                     <span class="exp-role">Roofer & Apprentice Stonemason</span>
                     <span class="exp-date">2007 – 2017</span>
                 </div>
-                <p class="exp-desc">Developed strong craftsmanship and practical problem-solving skills in the construction industry before transitioning to engineering.</p>
+                <p class="exp-desc">Developed strong craftsmanship and practical problem-solving skills in the
+                    construction industry before transitioning to engineering.</p>
             </div>
 
         </main>
     </div>
 </body>
+
 </html>

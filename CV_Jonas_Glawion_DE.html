@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf - Jonas Glawion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f4f6f7;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 210mm;
+            /* A4 width */
+            margin: 20px auto;
+            background-color: var(--white);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 30% 70%;
+            min-height: 297mm;
+            /* A4 height */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px 20px;
+        }
+
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #bdc3c7;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .skills-list,
+        .languages-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li,
+        .languages-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .summary {
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .exp-role {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        .exp-company {
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        .exp-date {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .exp-desc {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .exp-achievements {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        .exp-achievements li {
+            margin-bottom: 5px;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                min-height: 100vh;
+                display: grid;
+                grid-template-columns: 30% 70%;
+                /* Simulate sidebar color for full page height */
+                background: linear-gradient(to right, var(--primary-color) 0%, var(--primary-color) 30%, white 30%, white 100%);
+            }
+
+            .sidebar {
+                background-color: transparent !important;
+                color: var(--white) !important;
+                padding: 15mm 5mm 15mm 15mm;
+                height: auto;
+            }
+
+            .main-content {
+                padding: 15mm 15mm 15mm 10mm;
+            }
+
+            /* Prevent limits */
+            .profile-img-placeholder,
+            .sidebar h2,
+            .skills-list,
+            .contact-info,
+            .experience-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            h2,
+            h3,
+            .section-title {
+                break-after: avoid;
+                page-break-after: avoid;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-img-placeholder">
+                <img src="Gemini_Generated_Image_ldn0ffldn0ffldn0.png" alt="Jonas Glawion" width="150"
+                    style="border-radius: 50%; object-fit: cover;">
+            </div>
+
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+                <div>📍 Grabenstraße 135, 63762 Großostheim, Bayern, Deutschland</div>
+                <div>📧 jonasglawion@aol.com</div>
+                <div>📱 +49 179 4228285</div>
+                <div>🔗 linkedin.com/in/jonas-glawion-21824115a</div>
+            </div>
+
+            <h2>Fachkenntnisse</h2>
+            <ul class="skills-list">
+                <li><span class="skill-tag">Extrusion & Compoundierung</span></li>
+                <li><span class="skill-tag">PUR-Schaumsysteme</span></li>
+                <li><span class="skill-tag">SPS (Siemens, Schneider)</span></li>
+                <li><span class="skill-tag">Lean Six Sigma</span></li>
+                <li><span class="skill-tag">Python & Datenanalyse</span></li>
+                <li><span class="skill-tag">Prozessoptimierung</span></li>
+            </ul>
+
+            <h2>Persönliche Kompetenzen</h2>
+            <ul class="skills-list">
+                <li>Problemlösungskompetenz</li>
+                <li>Interkulturelle Kommunikation</li>
+                <li>Projektmanagement</li>
+                <li>Anpassungsfähigkeit</li>
+            </ul>
+
+            <h2>Sprachen</h2>
+            <ul class="languages-list">
+                <li><strong>Deutsch:</strong> Muttersprache</li>
+                <li><strong>Englisch:</strong> Fließend (Verhandlungssicher)</li>
+                <li><strong>Spanisch:</strong> Grundkenntnisse (A2)</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Jonas Glawion</h1>
+                <div class="job-title">Prozessingenieur - Kunststofftechnik</div>
+            </header>
+
+            <div class="summary">
+                Ergebnisorientierter Prozessingenieur mit über 8 Jahren Erfahrung in der Kunststoffverarbeitung,
+                spezialisiert auf Extrusion, Compoundierung und Polyurethan (PUR)-Systeme. Nachgewiesene Erfolge bei der
+                Optimierung von Produktionslinien, der Inbetriebnahme internationaler Projekte und der Implementierung
+                von Lean Six Sigma-Methoden. Umzugsbereit nach Spanien/Niederlande.
+            </div>
+
+            <h2 class="section-title">Berufserfahrung</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Prozessingenieur - Automobilkunststoffe</span>
+                    <span class="exp-date">Okt 2023 – Heute</span>
+                </div>
+                <div class="exp-company">Autoneum | Roßdorf, Deutschland</div>
+                <p class="exp-desc">Spezialisiert auf die Industrialisierung und Optimierung der
+                    Polyurethan-Schaumproduktion für akustische und thermische Isolation im Automobilbereich.</p>
+                <ul class="exp-achievements">
+                    <li>Optimierung von PUR-Dosiersystemen mit <strong>signifikanter Kostensenkung</strong> durch
+                        Materialeffizienz.</li>
+                    <li>Leitung der Industrialisierung eines neuen PUR-Schaumprodukts, was die Zykluszeit
+                        <strong>erheblich</strong> reduzierte.
+                    </li>
+                    <li>Implementierung eines KI-gestützten Qualitätvorhersagemodells mit Python, wodurch die
+                        Ausschussraten <strong>spürbar</strong> gesenkt wurden.</li>
+                    <li>Durchführung von Ursachenanalysen (8D, Ishikawa), die den First-Pass-Yield deutlich
+                        verbesserten.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Prozessingenieur - Kunststoffverarbeitung</span>
+                    <span class="exp-date">Nov 2017 – Okt 2023</span>
+                </div>
+                <div class="exp-company">MAAG Group | Großostheim, Bayern, Deutschland</div>
+                <p class="exp-desc">Fokus auf Extrusions-, Compoundier- und Granuliersysteme für Thermoplaste mit
+                    weltweiten Inbetriebnahmen.</p>
+                <ul class="exp-achievements">
+                    <li>Inbetriebnahme von <strong>12+ Granuliersystemen</strong> in Europa und Asien.</li>
+                    <li>Optimierung von Recyclingprozessen für PET und HDPE mit <strong>herausragender</strong>
+                        Durchsatzsteigerung.</li>
+                    <li>Reduzierung des Energieverbrauchs durch messbare Parameteroptimierung.</li>
+                    <li>Auslegung von Filtrations- und Lochplattensystemen für verschiedene Polymeranwendungen.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Ausbildung</h2>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Bachelor of Engineering - Kunststofftechnik</span>
+                    <span class="exp-date">2013 – 2017</span>
+                </div>
+                <div class="exp-company">Hochschule Darmstadt</div>
+                <ul class="exp-achievements">
+                    <li>Note: 2.8</li>
+                    <li>Thesis: Prozessoptimierung in Extrusion und Compoundierung.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Früher Werdegang</h2>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <span class="exp-role">Dachdecker & Steinmetz-Azubi</span>
+                    <span class="exp-date">2007 – 2017</span>
+                </div>
+                <p class="exp-desc">Entwicklung starker handwerklicher Fähigkeiten und praktischer
+                    Problemlösungskompetenz im Baugewerbe vor dem Wechsel ins Ingenieurwesen.</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

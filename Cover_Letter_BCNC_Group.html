@@ -98,6 +98,34 @@
                 padding: 40px;
             }
         }
+    
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 20mm;
+                min-height: 100vh;
+            }
+            header {
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 
@@ -107,8 +135,8 @@
             <div class="sender-info">
                 <h1>Jonas Glawion</h1>
                 <p>Process Engineer - Plastics Technology</p>
-                <p>Grossostheim, Germany | +49 [Phone]</p>
-                <p>[Email] | linkedin.com/in/jonas-glawion</p>
+                <p>Grabenstraße 135, 63762 Großostheim, Bavaria, Germany | +49 179 4228285</p>
+                <p>jonasglawion@aol.com | linkedin.com/in/jonas-glawion-21824115a</p>
             </div>
         </header>
 
@@ -134,7 +162,7 @@
             <p><strong>Automotive & Engineering Expertise</strong><br>
                 At <strong>Autoneum</strong>, I specialize in the industrialization of polyurethane foam components for
                 automotive acoustic and thermal insulation. I have led the launch of new product lines for E-mobility
-                vehicles, ensuring zero customer complaints and reducing cycle times by 18%. My experience with
+                vehicles, ensuring zero customer complaints and reducing cycle times by substantial. My experience with
                 <strong>PPAP</strong>, <strong>FMEA</strong>, and <strong>IATF 16949</strong> standards ensures I can
                 seamlessly integrate into your high-quality engineering workflows.</p>
 

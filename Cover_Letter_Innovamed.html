@@ -98,6 +98,34 @@
                 padding: 40px;
             }
         }
+    
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 20mm;
+                min-height: 100vh;
+            }
+            header {
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 
@@ -107,8 +135,8 @@
             <div class="sender-info">
                 <h1>Jonas Glawion</h1>
                 <p>Process Engineer - Plastics Technology</p>
-                <p>Grossostheim, Germany | +49 [Phone]</p>
-                <p>[Email] | linkedin.com/in/jonas-glawion</p>
+                <p>Grabenstraße 135, 63762 Großostheim, Bavaria, Germany | +49 179 4228285</p>
+                <p>jonasglawion@aol.com | linkedin.com/in/jonas-glawion-21824115a</p>
             </div>
         </header>
 
@@ -135,7 +163,7 @@
                 My experience at <strong>Autoneum</strong> in the automotive sector has instilled in me a rigorous
                 approach to quality and process stability (IATF 16949), which translates directly to the medical device
                 industry's ISO 13485 standards. I have a proven track record of using <strong>Root Cause Analysis (8D,
-                    Ishikawa)</strong> to eliminate defects and improve first-pass yields by 15%.</p>
+                    Ishikawa)</strong> to eliminate defects and improve first-pass yields by considerable.</p>
 
             <p><strong>Process Engineering & Data Analysis</strong><br>
                 At <strong>MAAG Group</strong>, I developed a deep technical understanding of polymer processing

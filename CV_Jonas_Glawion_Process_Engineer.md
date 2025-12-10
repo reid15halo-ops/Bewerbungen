@@ -1,9 +1,9 @@
 # Jonas Glawion
 **Process Engineer - Plastics Technology**
 
-📍 Grossostheim, Germany (Relocating to Spain/Netherlands)
-📧 [Email] | 📱 +49 [Phone]
-🔗 [LinkedIn Profile](https://linkedin.com/in/jonas-glawion-21824115a)
+📍 Grabenstraße 135, 63762 Großostheim, Bavaria, Germany (Relocating to Spain/Netherlands)
+📧 jonasglawion@aol.com | 📱 +49 179 4228285
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/jonas-glawion-21824115a-21824115a-21824115a)
 
 ---
 
@@ -29,21 +29,21 @@ Results-driven **Process Engineer** with over **8 years of experience** in plast
 
 *Specializing in the industrialization and optimization of polyurethane foam production for automotive acoustic and thermal insulation.*
 
-*   **Process Optimization:** Optimized PUR metering systems and mixing heads, achieving **8-12% cost reduction** through material efficiency improvements.
-*   **New Product Launch:** Led the industrialization of a new PUR foam insulation product, reducing cycle time by **18%** and ensuring **zero customer complaints** during the launch of 3 E-mobility product lines.
-*   **Quality Improvement:** Executed root cause analyses (8D, Ishikawa) to resolve production deviations, improving **first-pass yield by 15%**.
-*   **Digital Innovation:** Developed Python scripts for automated process data analysis and implemented an AI-driven quality prediction model, reducing scrap rates by **11%**.
+*   **Process Optimization:** Optimized PUR metering systems and mixing heads, achieving **significant cost reduction** through material efficiency improvements.
+*   **New Product Launch:** Led the industrialization of a new PUR foam insulation product, reducing cycle time by **substantial** and ensuring **zero customer complaints** during the launch of 3 E-mobility product lines.
+*   **Quality Improvement:** Executed root cause analyses (8D, Ishikawa) to resolve production deviations, improving **first-pass yield by considerable**.
+*   **Digital Innovation:** Developed Python scripts for automated process data analysis and implemented an AI-driven quality prediction model, reducing scrap rates by **notable**.
 *   **Lean Manufacturing:** Implemented 5S and Value Stream Mapping (VSM) to streamline workflows.
 
-### **MAAG Group** | Grossostheim, Germany
+### **MAAG Group** | Großostheim, Germany
 **Process Engineer - Plastics Processing & Extrusion** | *Nov 2017 – Oct 2023*
 
 *Focused on extrusion, compounding, and pelletizing systems for thermoplastics, providing global technical support and commissioning.*
 
 *   **Commissioning:** Successfully commissioned **12+ pelletizing systems** across Europe and Asia, consistently achieving target capacities on schedule.
 *   **Process Design:** Dimensioned filtration, die plates, and pelletizing systems for PP, PE, PET, and recycled polymers.
-*   **Recycling Optimization:** Optimized recycling processes for PET and HDPE, increasing throughput by **22%** while maintaining pellet quality.
-*   **Energy Efficiency:** Reduced energy consumption by **9%** through parameter optimization and equipment upgrades.
+*   **Recycling Optimization:** Optimized recycling processes for PET and HDPE, increasing throughput by **outstanding** while maintaining pellet quality.
+*   **Energy Efficiency:** Reduced energy consumption by **measurable** through parameter optimization and equipment upgrades.
 *   **Technical Training:** Conducted comprehensive training for customers and internal staff on plant operation and troubleshooting.
 
 ---

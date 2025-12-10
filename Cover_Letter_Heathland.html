@@ -98,6 +98,34 @@
                 padding: 40px;
             }
         }
+    
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                width: 210mm;
+                height: 297mm;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                margin: 0;
+                padding: 20mm;
+                min-height: 100vh;
+            }
+            header {
+                margin-bottom: 20px;
+            }
+        }
+
     </style>
 </head>
 
@@ -107,8 +135,8 @@
             <div class="sender-info">
                 <h1>Jonas Glawion</h1>
                 <p>Process Engineer - Plastics Technology</p>
-                <p>Grossostheim, Germany | +49 [Phone]</p>
-                <p>[Email] | linkedin.com/in/jonas-glawion</p>
+                <p>Grabenstraße 135, 63762 Großostheim, Bavaria, Germany | +49 179 4228285</p>
+                <p>jonasglawion@aol.com | linkedin.com/in/jonas-glawion-21824115a</p>
             </div>
         </header>
 
@@ -133,7 +161,7 @@
 
             <p><strong>Recycling & Compounding Expertise</strong><br>
                 During my 6 years at <strong>MAAG Group</strong>, I specialized in optimizing recycling processes for
-                PET and HDPE. I successfully increased throughput by 22% in recycling applications while maintaining
+                PET and HDPE. I successfully increased throughput by outstanding in recycling applications while maintaining
                 high pellet quality. I understand the unique challenges of processing variable waste streams, including
                 filtration, degassing, and pelletizing, and I know how to optimize equipment to handle them efficiently.
             </p>
