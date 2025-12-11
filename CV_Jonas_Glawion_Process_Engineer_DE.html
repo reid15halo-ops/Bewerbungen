@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Jonas Glawion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #fff;
+            --section-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 210mm;
+            /* A4 width */
+            margin: 0 auto;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-info h1 {
+            font-size: 32px;
+            margin: 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header-info h2 {
+            font-size: 18px;
+            margin: 5px 0 0;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+            color: var(--light-text);
+        }
+
+        .contact-info p {
+            margin: 2px 0;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .summary-text {
+            font-size: 14px;
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        /* CV Content Table Style */
+        .cv-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cv-row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .cv-date {
+            width: 130px;
+            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary-color);
+            padding-right: 20px;
+            text-align: right;
+            border-right: 2px solid #eee;
+            margin-right: 20px;
+        }
+
+        .cv-content {
+            flex-grow: 1;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 2px;
+            color: var(--text-color);
+        }
+
+        .company-name {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .job-details ul {
+            margin: 0;
+            padding-left: 18px;
+            list-style-type: none;
+        }
+
+        .job-details li {
+            position: relative;
+            margin-bottom: 4px;
+            font-size: 13.5px;
+        }
+
+        .job-details li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category h3 {
+            font-size: 14px;
+            color: var(--primary-color);
+            margin: 0 0 5px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2px;
+        }
+
+        .skill-list {
+            font-size: 13.5px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 2px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            color: #444;
+        }
+
+        .highlight {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        /* Profile Photo */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                width: 100%;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                padding: 20px 40px;
+            }
+
+            @page {
+                margin: 0;
+                size: A4;
+            }
+
+            .page-break {
+                break-before: page;
+                page-break-before: always;
+                display: block;
+                height: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="profile-container">
+                <!-- PLATZHALTER FÜR FOTO: Bitte 'profile.jpg' durch Ihren Dateinamen ersetzen -->
+                <img src="profile.jpg" alt="Jonas Glawion" class="profile-photo">
+                <div class="header-info">
+                    <h1>Jonas Glawion</h1>
+                    <h2>Prozessingenieur | Verfahrenstechnik & Data Science</h2>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>Grabenstraße 135, 63762 Großostheim</p>
+                <p>+49 179 422 82 85</p>
+                <p>jonasglawion@aol.com</p>
+            </div>
+        </header>
+
+        <!-- Profil -->
+        <div class="profile-section">
+            <div class="section-title">Profil</div>
+            <p class="summary-text">
+                Erfahrener Prozessingenieur mit 9+ Jahren fundierter Expertise in der Verfahrenstechnik (Schwerpunkt
+                PUR-Schäumen und Extrusion) und einer ausgeprägten Leidenschaft für datengetriebene Prozessoptimierung.
+                Ich verbinde tiefgehendes technisches Verständnis für komplexe Anlagen mit modernen
+                Data-Science-Kompetenzen (Python, KI). Mein Fokus liegt auf der nachhaltigen
+                Steigerung der Produktionseffizienz, der Ausschussreduzierung durch präzise Datenanalysen und der
+                Implementierung zukunftsfähiger Industrie 4.0-Lösungen in der Automobil- und Kunststoffindustrie.
+            </p>
+        </div>
+
+        <!-- Berufserfahrung -->
+        <div class="section-title">Berufserfahrung</div>
+        <div class="cv-table">
+
+            <!-- Autoneum -->
+            <div class="cv-row">
+                <div class="cv-date">
+                    10/2023 – Heute
+                </div>
+                <div class="cv-content">
+                    <div class="job-title">Process Engineer – Automotive Plastics / PUR Foams</div>
+                    <span class="company-name">Autoneum, Roßdorf (Hessen)</span>
+                    <div class="job-details">
+                        <ul>
+                            <li>Verantwortung für die <strong>Optimierung und Stabilisierung</strong> der
+                                Produktionsprozesse im Bereich Polyurethane (PUR).</li>
+                            <li>Spezialisierung auf Verarbeitung von <strong>Isocyanat</strong> und
+                                <strong>Polyol</strong> Systemen.
+                            </li>
+                            <li>Prozessentwicklung für das Hinterschäumen von <strong>POE-Schwerschichtfolien</strong>
+                                (50-80% CaCO3).</li>
+                            <li>Technische Betreuung von Extrusionslinien, Spinnfaserherstellung, PUR-Dosieranlagen,
+                                Mischköpfen und Schaumaustragssystemen.</li>
+                            <li>Durchführung systematischer <strong>Ursachenanalysen (8D-Reports, Ishikawa)</strong> zur
+                                nachhaltigen Ausschussreduzierung.</li>
+                            <li>Koordination von PPAP-Validierungen und Betreuung von Musterbauten für OEM-Kunden
+                                (E-Mobility).</li>
+                            <li>Anwendung von <strong>Lean Manufacturing</strong> Prinzipien (5S, KVP) zur
+                                Effizienzsteigerung der Fertigungslinien.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAAG Group -->
+            <div class="cv-row">
+                <div class="cv-date">
+                    11/2017 – 10/2023
+                </div>
+                <div class="cv-content">
+                    <div class="job-title">Ingenieur Verfahrenstechnik</div>
+                    <span class="company-name">MAAG Group, Großostheim (Bayern)</span>
+                    <div class="job-details">
+                        <ul>
+                            <li>Planung und Durchführung von Kundenversuchen (Recycling, Virgin, Compounding) an Strang-
+                                und Unterwassergranulierungen mit Schmelzepumpen, Siebwechslern, Recyclingfilter und
+                                Pulvermühlen.</li>
+                            <li><strong>Auslegung und Berechnung</strong> von Schmerlzefiltern, Pulvermühlen,
+                                Lochplatten und
+                                Granuliersystemen (Druckverlustsimulation).</li>
+                            <li>Weltweite <strong>Inbetriebnahme</strong> von Neuanlagen und verfahrenstechnische
+                                Kundenbetreuung vor Ort.</li>
+                            <li>Durchführung komplexer Laboranalysen: MFI, IV, DSC-Messungen sowie Prüfung von
+                                Schüttdichte und Partikelverteilung.</li>
+                            <li>Troubleshooting und Prozessoptimierung direkt an den Kundenanlagen zur Maximierung des
+                                Durchsatzes.</li>
+                            <li>Erstellung technischer Dokumentationen, Testberichte und Berechnungstools (Excel).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page-break"></div>
+            <!-- Header -->
+            <header>
+                <div class="profile-container">
+                    <!-- PLATZHALTER FÜR FOTO: Bitte 'profile.jpg' durch Ihren Dateinamen ersetzen -->
+                    <img src="profile.jpg" alt="Jonas Glawion" class="profile-photo">
+                    <div class="header-info">
+                        <h1>Jonas Glawion</h1>
+                        <h2>Prozessingenieur | Verfahrenstechnik & Data Science</h2>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p>Grabenstraße 135, 63762 Großostheim</p>
+                    <p>+49 179 422 82 85</p>
+                    <p>jonasglawion@aol.com</p>
+                </div>
+            </header>
+            <!-- Rest Bedachungen -->
+            <div class="cv-row">
+                <div class="cv-date">
+                    05/2015 – 07/2017
+                </div>
+                <div class="cv-content">
+                    <div class="job-title">Dachdecker (Werkstudent/Teilzeit)</div>
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    }
+                    <!-- Rest Bedachungen -->
+                    <div class="cv-row">
+                        <div class="cv-date">
+                            05/2015 – 07/2017
+                        </div>
+                        <div class="cv-content">
+                            <div class="job-title">Dachdecker (Werkstudent/Teilzeit)</div>
+                            <span class="company-name">Rest Bedachungen GmbH, Großostheim</span>
+                            <div class="job-details">
+                                <ul>
+                                    <li>Unterstützung bei Dacheindeckungen und Reparaturarbeiten während des Studiums.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ausbildung -->
+                <div class="section-title">Ausbildung</div>
+                <div class="cv-table">
+                    <div class="cv-row">
+                        <div class="cv-date">
+                            [Jahr] – [Jahr]
+                        </div>
+                        <div class="cv-content">
+                            <div class="job-title">Studium Verfahrenstechnik / Maschinenbau (B.Sc. / M.Sc. / Dipl.-Ing.)
+                            </div>
+                            <span class="company-name">Hochschule Darmstadt h_da</span>
+                            <div class="job-details">
+                                <ul>
+                                    <li>Schwerpunkte: Thermische Verfahrenstechnik, Anlagenbau, Kunststofftechnik.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-date">
+                            09/2007 – 08/2010
+                        </div>
+                        <div class="cv-content">
+                            <div class="job-title">Ausbildung zum Steinmetz und Steinbildhauer</div>
+                            <span class="company-name">Zahn Manfred Natursteine GmbH, Großostheim</span>
+                            <div class="job-details">
+                                <ul>
+                                    <li>Erfolgreich abgeschlossene handwerkliche Ausbildung. Entwicklung von hoher
+                                        Präzision und
+                                        Materialverständnis.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kenntnisse -->
+                <div class="section-title">Kenntnisse & Qualifikationen</div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Verfahrenstechnik</h3>
+                        <ul class="skill-list">
+                            <li><span class="tag">PUR-Schäumen</span> <span class="tag">Extrusion</span> <span
+                                    class="tag">Spritzguss</span></li>
+                            <li><span class="tag">Rcycling & Compounding</span> <span
+                                    class="tag">Prozessleittechnik</span></li>
+                            <li><span class="tag">Material: Isocyanate, Polyol</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>IT & Data Science</h3>
+                        <ul class="skill-list">
+                            <li><span class="tag highlight">Python (Advanced)</span> <span class="tag">Data
+                                    Analysis</span>
+                                <span class="tag">KI / AI</span>
+                            </li>
+                            <li><span class="tag">Sleep Analysis (Data Mining)</span></li>
+                            <li><span class="tag">Excel (Expert, VBA)</span> <span class="tag">PLC Basics</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Methoden & Tools</h3>
+                        <ul class="skill-list">
+                            <li><span class="tag">Lean Manufacturing (5S, KVP)</span></li>
+                            <li><span class="tag">Six Sigma (8D, Ishikawa, FMEA)</span></li>
+                            <li><span class="tag">PPAP</span> <span class="tag">Projektmanagement</span></li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Sprachen</h3>
+                        <ul class="skill-list">
+                            <li>Deutsch: Muttersprache</li>
+                            <li>Englisch: Verhandlungssicher</li>
+                            <li>Spanisch: A2 (Grundkenntnisse)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+</body>
+
+</html>
